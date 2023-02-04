@@ -9,9 +9,8 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
-int main()
-{
-    int n;
-    cin >> n;
-    cout << n * n << endl;
+int main() {
+  int n;
+  cin >> n;
+  cout << n * n << endl;
 }

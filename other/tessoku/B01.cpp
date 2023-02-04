@@ -9,18 +9,8 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
-int main()
-{
-    int n, x;
-    cin >> n >> x;
-    int ans = 0;
-
-    rep1(i, n) rep1(j, n) rep1(k, n)
-    {
-        if (i + j + k == x) ans++;
-    }
-
-    cout << ans << endl;
-
-    return 0;
+int main() {
+  int A, B;
+  cin >> A >> B;
+  cout << A + B << endl;
 }

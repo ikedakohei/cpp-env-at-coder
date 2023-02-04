@@ -9,16 +9,15 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
-int main()
-{
-    int n, k;
-    cin >> n >> k;
-    vector<int> a(n, 0);
-    rep(i, n) cin >> a[i];
+int main() {
+  int A, B;
+  cin >> A >> B;
+  string answer = "No";
 
-    sort(a.begin(), a.end());
-    {
-        auto it = lower_bound(a.begin(), a.end(), x[i]);
-        cout << res << endl;
+  for (int i = A; i <= B; i++) {
+    if (100 % i == 0) {
+      answer = "Yes";
     }
+  }
+  cout << answer << endl;
 }

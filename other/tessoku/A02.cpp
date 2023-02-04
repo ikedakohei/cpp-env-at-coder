@@ -9,26 +9,19 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
-int main()
-{
-    int n, x;
-    cin >> n >> x;
-    vector<int> a(n, 0);
-    rep(i, n) { cin >> a[i]; }
+int main() {
+  int N, X;
+  cin >> N >> X;
+  vector<int> A(N);
+  rep(i, N) { cin >> A.at(i); }
 
-    auto result = find(a.begin(), a.end(), x);  //計算量は,o(n)
-    if (result == a.end()) {
-        cout << "No" << endl;
+  string answer = "No";
+  rep(i, N) {
+    if (A.at(i) == X) {
+      answer = "Yes";
+      break;
     }
-    else {
-        cout << "Yes" << endl;
-    }
-    // rep(i, n)
-    // {
-    //     if (a[i] == x) {
-    //         cout << "Yes" << endl;
-    //         return 0;
-    //     }
-    // }
-    // cout << "No" << endl;
+  }
+
+  cout << answer << endl;
 }
