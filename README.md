@@ -16,6 +16,8 @@
 
 ## Execute
 
+`problem.in` に入力例をコピペ
+
 ```shell
 ./problem.exe < problem.in
 ```
