@@ -22,7 +22,7 @@
 ./problem.exe < problem.in
 ```
 
-または↓でも可（aliasを設定）
+または↓でも可（aliasを設定済）
 
 ```shell
 ei
