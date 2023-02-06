@@ -37,3 +37,7 @@ ei
 ## 参考文献
 
 <https://iconcreator.hatenablog.com/entry/2021/09/19/200000>
+
+## AC Library
+
+<https://atcoder.github.io/ac-library/master/document_ja/index.html>
