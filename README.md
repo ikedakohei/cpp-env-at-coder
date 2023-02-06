@@ -1,4 +1,4 @@
-# vscode 環境で AtCoder のコードテスト
+# vscode 環境で AtCoder
 
 ## コンテナに接続
 
@@ -18,6 +18,12 @@
 
 ```shell
 ./problem.exe < problem.in
+```
+
+または↓でも可（aliasを設定）
+
+```shell
+ei
 ```
 
 ## Template の作成
