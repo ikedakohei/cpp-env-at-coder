@@ -10,7 +10,12 @@
       "VARIANT": "debian-11"
     }
   },
-  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+  "runArgs": [
+    "--name=cpp-env-at-coder",
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
   // Set *default* container specific settings.json values on container create.
   "customizations": {
     // Configure properties specific to VS Code.
