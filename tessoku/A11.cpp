@@ -12,10 +12,20 @@ using mint = modint1000000007;
 int main() {
   int N, X;
   cin >> N >> X;
-  vector<int> A(N);
-  rep(i, N) cin >> A.at(i);
+  vector<int> A(N + 1);
+  rep1(i, N) cin >> A[i];
 
-  auto it = lower_bound(A.begin(), A.end(), X);
-  int index = it - A.begin();
-  if (A[index] == X) cout << index + 1 << endl;
+  int L = 1, R = N;
+
+  while (true) {
+    int M = (L + R) / 2;
+
+    if (X > A[M]) L = M + 1;
+    if (X < A[M]) R = M - 1;
+
+    if (X == A[M]) {
+      cout << M << endl;
+      break;
+    }
+  }
 }
