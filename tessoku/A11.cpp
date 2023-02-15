@@ -17,7 +17,7 @@ int main() {
 
   int L = 1, R = N;
 
-  while (true) {
+  while (L <= R) {
     int M = (L + R) / 2;
 
     if (X > A[M]) L = M + 1;

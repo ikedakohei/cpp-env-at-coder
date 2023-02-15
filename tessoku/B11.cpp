@@ -12,18 +12,32 @@ using mint = modint1000000007;
 int main() {
   int N, Q;
   cin >> N;
-  vector<int> A(N, 0);
-  rep(i, N) cin >> A.at(i);
+  vector<int> A(N + 1);
+  rep1(i, N) cin >> A[i];
   cin >> Q;
-  vector<int> X(Q, 0);
-  rep(i, Q) cin >> X.at(i);
+  vector<int> X(Q + 1);
+  rep1(i, Q) cin >> X[i];
 
-  sort(A.begin(), A.end());
+  sort(A.begin() + 1, A.end());
 
-  rep(i, Q) {
-    auto it = lower_bound(A.begin(), A.end(), X.at(i));
-    int answer = it - A.begin();
+  rep1(i, Q) {
+    int L = 1, R = N;
 
-    cout << answer << endl;
+    while (L <= R) {
+      int M = (L + R) / 2;
+
+      if (X[i] > A[M]) L = M + 1;
+      if (X[i] < A[M]) R = M - 1;
+
+      if (X[i] == A[M]) {
+        cout << M - 1 << endl;
+        break;
+      }
+
+      if (L > R) {
+        cout << L - 1 << endl;
+        break;
+      }
+    }
   }
 }
