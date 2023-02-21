@@ -14,11 +14,10 @@ int main() {
   cin >> s;
 
   rep(i, s.size()) {
-    if (s.at(i) == '1') {
+    if (s[i] == '1')
       cout << 0;
-    } else if (s.at(i) == '0') {
+    else
       cout << 1;
-    }
   }
   cout << endl;
 }
