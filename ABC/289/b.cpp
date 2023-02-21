@@ -10,30 +10,25 @@ using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
 int main() {
-  int N, M;
-  cin >> N >> M;
+  int n, m;
+  cin >> n >> m;
+  vector<bool> re(n + 1, false);
 
-  vector<int> a(M);
-  rep(i, M) { cin >> a[i]; }
-
-  vector<int> re(N + 1, 0);
-  rep(i, M) { re[a[i]] = 1; }
-
-  vector<int> ans;
-  int L = 1;
-
-  rep1(i, N) {
-    if (re[i] == 0) {
-      for (int j = i; j >= L; j--) {
-        ans.push_back(j);
-      }
-
-      L = i + 1;
-    }
+  rep(i, m) {
+    int a;
+    cin >> a;
+    re[a] = true;
   }
 
-  rep(i, N) {
-    if (i > 0) cout << " ";
+  vector<int> b;
+  rep(i, n + 1) if (!re[i]) b.push_back(i);
+
+  vector<int> ans(n);
+  rep(i, n) ans[i] = i + 1;
+  rep(i, b.size() - 1) reverse(ans.begin() + b[i], ans.begin() + b[i + 1]);
+
+  rep(i, n) {
+    if (i != 0) cout << ' ';
     cout << ans[i];
   }
 
