@@ -10,24 +10,15 @@ using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
 int main() {
-  int N, K;
-  cin >> N >> K;
-  vector<int> A(N);
-  rep(i, N) cin >> A[i];
+  int n, k;
+  cin >> n >> k;
+  vector<int> a(n);
+  rep(i, n) cin >> a[i];
 
-  sort(A.begin(), A.end());
-  vector<int> B(K, 0);
+  set<int> st;
+  rep(i, n) st.insert(a[i]);
+  int x = 0;
+  while (st.count(x)) x++;
 
-  rep(i, K) {
-    if (binary_search(A.begin(), A.end(), i)) {
-      B[i]++;
-    }
-  }
-
-  rep(i, K + 1) {
-    if (B[i] == 0) {
-      cout << i << endl;
-      break;
-    }
-  }
+  cout << min(x, k) << endl;
 }
