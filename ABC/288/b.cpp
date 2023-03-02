@@ -10,12 +10,11 @@ using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
 int main() {
-  int N, K;
-  cin >> N >> K;
-  vector<string> S(K);
-  rep(i, K) { cin >> S.at(i); }
-  sort(S.begin(), S.end());
-  rep(i, K) { cout << S.at(i) << endl; }
+  int n, k;
+  cin >> n >> k;
+  vector<string> s(k);
+  rep(i, k) cin >> s[i];
 
-  return 0;
+  sort(s.begin(), s.end());
+  rep(i, k) cout << s[i] << endl;
 }

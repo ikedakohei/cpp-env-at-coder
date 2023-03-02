@@ -10,10 +10,11 @@ using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
 int main() {
-  int N;
-  cin >> N;
-  vector<int> A(N), B(N);
-  rep(i, N) { cin >> A.at(i) >> B.at(i); }
-  rep(i, N) { cout << A.at(i) + B.at(i) << endl; }
-  return 0;
+  int n;
+  cin >> n;
+  rep(i, n) {
+    int a, b;
+    cin >> a >> b;
+    cout << a + b << endl;
+  }
 }
