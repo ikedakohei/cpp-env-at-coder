@@ -46,16 +46,16 @@ int main() {
   rep(i, n.size()) {
     rep(j, 3) {
       rep(k, 3) {
-        if (n[i] == '0') cout << a0[i % 3][k];
-        if (n[i] == '1') cout << a1[i % 3][k];
-        if (n[i] == '2') cout << a2[i % 3][k];
-        if (n[i] == '3') cout << a3[i % 3][k];
-        if (n[i] == '4') cout << a4[i % 3][k];
-        if (n[i] == '5') cout << a5[i % 3][k];
-        if (n[i] == '6') cout << a6[i % 3][k];
-        if (n[i] == '7') cout << a7[i % 3][k];
-        if (n[i] == '8') cout << a8[i % 3][k];
-        if (n[i] == '9') cout << a9[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '0') cout << a0[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '1') cout << a1[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '2') cout << a2[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '3') cout << a3[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '4') cout << a4[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '5') cout << a5[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '6') cout << a6[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '7') cout << a7[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '8') cout << a8[i % 3][k];
+        if (n[(i / 3) * 3 + j] == '9') cout << a9[i % 3][k];
       }
     }
     cout << endl;
